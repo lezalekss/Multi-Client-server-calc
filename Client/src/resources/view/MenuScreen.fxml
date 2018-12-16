@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="500.0" prefWidth="750.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MenuController">
+    <top>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+
+            <Label prefHeight="50.0" text="Dobrodošli ! Server Vam je na raspolaganju." textAlignment="CENTER">
+                <font>
+                    <Font name="Times New Roman Bold" size="25.0" />
+                </font>
+                <textFill>
+                    <RadialGradient centerX="0.18333333333333335" centerY="0.2571428571428571" cycleMethod="REFLECT" focusAngle="-162.35" focusDistance="0.5116279069767442" proportional="false" radius="0.9069767441860466">
+                        <stops>
+                            <Stop color="#b5a950" />
+                            <Stop color="#b2a550" offset="0.4673539518900343" />
+                            <Stop color="#ffff8d" offset="0.5704467353951891" />
+                            <Stop color="#b2a550" offset="0.7147766323024055" />
+                            <Stop color="#b2a550" offset="0.8419243986254296" />
+                            <Stop color="#c6e378" offset="1.0" />
+                        </stops>
+                    </RadialGradient>
+                </textFill>
+            </Label>
+
+        </HBox>
+    </top>
+    <center>
+        <JFXTabPane BorderPane.alignment="CENTER">
+            <Tab closable="false" text="Kalkulacije">
+                <AnchorPane layoutY="76.0" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+
+                    <JFXButton fx:id="bt1" layoutX="392.0" layoutY="98.0" onMouseClicked="#upisi1" prefHeight="30.0" prefWidth="56.0" text="1" />
+                    <JFXButton fx:id="bt2" layoutX="448.0" layoutY="98.0" onMouseClicked="#upisi2" prefHeight="30.0" prefWidth="56.0" text="2" />
+                    <JFXButton fx:id="bt3" layoutX="504.0" layoutY="98.0" onMouseClicked="#upisi3" prefHeight="30.0" prefWidth="56.0" text="3" />
+                    <JFXButton fx:id="btBackspace" layoutX="560.0" layoutY="98.0" onMouseClicked="#backspace" prefHeight="35.0" prefWidth="56.0" text="⌫" />
+                    <JFXButton fx:id="bt4" layoutX="392.0" layoutY="137.0" onMouseClicked="#upisi4" prefHeight="30.0" prefWidth="56.0" text="4" />
+                    <JFXButton fx:id="bt5" layoutX="448.0" layoutY="137.0" onMouseClicked="#upisi5" prefHeight="30.0" prefWidth="56.0" text="5" />
+                    <JFXButton fx:id="bt6" layoutX="504.0" layoutY="137.0" onMouseClicked="#upisi6" prefHeight="30.0" prefWidth="56.0" text="6" />
+                    <JFXButton fx:id="btPlus" layoutX="560.0" layoutY="137.0" onMouseClicked="#saberi" prefHeight="35.0" prefWidth="56.0" text="+" />
+                    <JFXButton fx:id="bt7" layoutX="392.0" layoutY="176.0" onMouseClicked="#upisi7" prefHeight="30.0" prefWidth="56.0" text="7" />
+                    <JFXButton fx:id="bt8" layoutX="448.0" layoutY="176.0" onMouseClicked="#upisi8" prefHeight="30.0" prefWidth="56.0" text="8" />
+                    <JFXButton fx:id="bt9" layoutX="504.0" layoutY="176.0" onMouseClicked="#upisi9" prefHeight="30.0" prefWidth="56.0" text="9" />
+                    <JFXButton fx:id="btMinus" layoutX="560.0" layoutY="176.0" onMouseClicked="#oduzmi" prefHeight="35.0" prefWidth="56.0" text="-" />
+                    <JFXButton fx:id="bt0" layoutX="392.0" layoutY="215.0" onMouseClicked="#upisi0" prefHeight="30.0" prefWidth="56.0" text="0" />
+                    <JFXButton fx:id="btC" layoutX="448.0" layoutY="215.0" onMouseClicked="#obrisi" prefHeight="30.0" prefWidth="56.0" text="C" />
+                    <JFXButton fx:id="btMnozenje" layoutX="504.0" layoutY="215.0" onMouseClicked="#pomnozi" prefHeight="30.0" prefWidth="56.0" text="*" />
+                    <JFXButton fx:id="btDeljenje" layoutX="560.0" layoutY="215.0" onMouseClicked="#podeli" prefHeight="35.0" prefWidth="56.0" text="/" />
+                    <JFXButton layoutX="207.0" layoutY="99.0" onAction="#salji" prefHeight="78.0" prefWidth="157.0" text="ŠALJI SERVERU NA RAČUNANJE" wrapText="true" />
+                    <JFXButton fx:id="btPreuzmi" layoutX="207.0" layoutY="176.0" onAction="#preuzmi" prefHeight="78.0" prefWidth="158.0" text="PREUZMI ISTORIJU KALKULACIJA" wrapText="true" />
+                    <TextField fx:id="result" editable="false" layoutX="388.0" layoutY="61.0" prefHeight="37.0" prefWidth="232.0" style="-fx-border-radius: 20px; -fx-background-radius: 20px; -fx-text-fill:#2A2E37; -fx-alignment: baseline-right" />
+                    <FontAwesomeIconView glyphName="CALCULATOR" layoutX="87.0" layoutY="156.0" size="55" />
+                    <FontAwesomeIconView glyphName="LIST_ALT" layoutX="87.0" layoutY="234.0" size="55" wrappingWidth="48.0" />
+                </AnchorPane>
+            </Tab>
+            <Tab closable="false" text="Istorija">
+
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <TextArea fx:id="istorijaTekst" editable="false" layoutX="275.0" layoutY="82.0" prefHeight="190.0"
+                              prefWidth="187.0"
+                              promptText="Poštovani korisniče, još uvek niste vršili operacije računanja."
+                              wrapText="true">
+                        <font>
+                            <Font size="18.0"/>
+                        </font>
+                    </TextArea>
+                </AnchorPane>
+                
+            </Tab>
+        </JFXTabPane>
+    </center>
+
+</BorderPane>

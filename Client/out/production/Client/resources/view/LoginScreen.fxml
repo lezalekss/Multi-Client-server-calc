@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="450" prefWidth="419" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+
+    <FontAwesomeIconView glyphName="LOCK" layoutX="200" layoutY="79" size="55" />
+
+    <FontAwesomeIconView glyphName="USER" layoutX="64" layoutY="149" size="25" />
+    <JFXTextField fx:id="usernameField" labelFloat="true" layoutX="95" layoutY="122" onKeyReleased="#handleEmptyFields" prefHeight="33" prefWidth="259" promptText="Username">
+    </JFXTextField>
+
+    <FontAwesomeIconView glyphName="KEY" layoutX="64" layoutY="224" size="25" />
+    <JFXPasswordField fx:id="passwordField" labelFloat="true" layoutX="95" layoutY="194" onKeyReleased="#handleEmptyFields" prefHeight="33" prefWidth="259" promptText="Password">
+    </JFXPasswordField>
+
+
+    <JFXButton fx:id="loginButton"  disable="true" layoutX="106" layoutY="300" onAction="#handleLoginButton" prefHeight="40" prefWidth="90" text="Login" defaultButton="true"/>
+
+    <JFXButton  layoutX="239" layoutY="300"  onAction="#handleGuestButton" prefHeight="40" prefWidth="90" text="Guest" />
+
+    <JFXButton fx:id="registerButton" disable="true" onAction="#handleRegisterButton" layoutX="130" layoutY="360" prefHeight="40" prefWidth="160" text="Registruj se" />
+
+
+
+
+</AnchorPane>

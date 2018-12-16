@@ -1,0 +1,62 @@
+*{
+    -fx-primary: #2A2E37;
+    -fx-secondary: #FFFF8D;
+    -fx-primary-text: #B2B2B2;
+    -fx-red: #FF0000;
+}
+
+.glyph-icon{
+    -fx-fill: -fx-secondary;
+}
+.root{
+    -fx-background-image: url("../image/login.png") ;
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
+    -fx-background-size: cover;
+}
+.usernameField , .password-field{
+    -fx-font-size: 16px;
+}
+
+.button{
+    -fx-text-fill: -fx-primary-text;
+    -fx-background-color: -fx-primary;
+    -fx-border-color: -fx-secondary;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-font-size: 12pt;
+}
+
+.button:hover, .button:focused{
+    -fx-border-color: -fx-secondary;
+    -fx-background-color: -fx-secondary;
+    -fx-text-fill: -fx-primary;
+}
+
+.text-field{
+    -fx-text-fill: -fx-primary-text;
+    -fx-font-size: 12pt;
+    -jfx-focus-color: -fx-secondary;
+    -fx-text-fill: derive(-fx-secondary, 20%);
+}
+
+.incorrect-info{
+    -jfx-focus-color: -fx-red;
+    -jfx-unfocus-color: -fx-red;
+}
+.tab{
+    -fx-background-color: -fx-primary;
+}
+
+.tab-header-background{
+    -fx-background-color: -fx-primary;
+}
+
+.tab-label{
+    -fx-text-fill: -fx-secondary;
+}
+
+.tab-main{
+    -fx-pref-height: 60;
+    -fx-max-height: 60;
+}
